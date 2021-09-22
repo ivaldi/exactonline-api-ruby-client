@@ -46,7 +46,7 @@ module Elmas
     # Perform an HTTP request
     def request(method, path, options = {})
       path = build_path(path, options)
-
+      puts(options[:body])
       response = connection.send(method) do |request|
         case method
         when :post, :put
